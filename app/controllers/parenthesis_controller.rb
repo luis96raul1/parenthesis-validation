@@ -54,7 +54,11 @@ class ParenthesisController < ApplicationController
         break
       end
     end
-    balanced ? ("balanceado") : ("desbalanceado")
-    render :json => { :result => balanced }
+    result = balanced ? ("balanceado") : ("desbalanceado")
+    # render root_path
+    #render text in validate
+    # render plain: result
+    # redirect_to root_path, notice: result
+    redirect_to({:action => 'index', :notice => result})
   end
 end

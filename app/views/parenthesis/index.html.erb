@@ -1,5 +1,12 @@
-<div>asdfasdfasdfs</div>
-<%= form_with url:'/validate',method: :get do |form|%>
-  <%= form.text_field :query %>
-  <%= form.submit 'validate' %>
-<% end %>
+<div class='main-container'>
+  <div class='main-card'>
+    <p>Escribe el texto a continuación para que averigües si está balanceado o no.</p>
+    <div>
+      <%= form_with url:'/validate',method: :get do |form|%>
+        <%= form.text_field :query %>
+        <%= form.submit 'validar' %>
+      <% end %> 
+    </div>
+    <div class='response'><%= params[:notice] %></div>
+  </div>
+</div>
