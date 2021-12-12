@@ -1,0 +1,5 @@
+<div>asdfasdfasdfs</div>
+<%= form_with url:'/validate',method: :get do |form|%>
+  <%= form.text_field :query %>
+  <%= form.submit 'validate' %>
+<% end %>
